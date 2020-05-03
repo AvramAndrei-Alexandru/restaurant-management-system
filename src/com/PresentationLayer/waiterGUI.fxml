@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PresentationLayer.WaiterGUI">
+   <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#listProductsButtonPressed" text="List products" />
+   <Button layoutX="14.0" layoutY="46.0" mnemonicParsing="false" onMouseClicked="#listOrderButtonPressed" prefHeight="25.0" prefWidth="84.0" text="List orders" />
+   <TableView fx:id="menuItemsTable" layoutX="14.0" layoutY="472.0" onMouseClicked="#tableMouseClickedFunction" prefHeight="296.0" prefWidth="409.0">
+       <placeholder>
+           <Label text="Press the button to see the menu contents" />
+       </placeholder>
+     <columns>
+         <TableColumn fx:id="nameColumn" editable="false" prefWidth="75.0" text="Name" />
+         <TableColumn fx:id="priceColumn" editable="false" prefWidth="75.0" text="Price" />
+         <TableColumn fx:id="moreProductsColumn" editable="false" prefWidth="75.0" text="Simple product" />
+     </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+   </TableView>
+   <TextArea fx:id="moreItemsTextField" layoutX="453.0" layoutY="472.0" prefHeight="296.0" prefWidth="333.0" />
+   <TableView fx:id="orderTable" layoutX="10.0" layoutY="238.0" onMouseClicked="#orderTableMouseClicked" prefHeight="216.0" prefWidth="409.0">
+       <placeholder>
+           <Label text="Press the button to the orders" />
+       </placeholder>
+       <columns>
+           <TableColumn fx:id="orderIDColumn" editable="false" prefWidth="75.0" text="Order ID" />
+           <TableColumn fx:id="tableIDColumn" editable="false" prefWidth="75.0" text="Table ID" />
+           <TableColumn fx:id="dateColumn" editable="false" prefWidth="168.0" text="Date" />
+           <TableColumn fx:id="priceOrderColumn" editable="false" prefWidth="90.0" text="Price" />
+       </columns>
+   </TableView>
+   <Button layoutX="142.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#createOrderButtonPressed" text="Create new order" />
+   <TextField fx:id="tableIDTextField" layoutX="274.0" layoutY="14.0" prefHeight="25.0" prefWidth="93.0" promptText="Table ID" />
+   <Button layoutX="142.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#selectOrderFromTableMousePressed" prefHeight="25.0" prefWidth="142.0" text="Select order from table" />
+   <Button layoutX="142.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#addSelectedProductToOrder" prefHeight="25.0" prefWidth="189.0" text="Add selected product to order" />
+   <Button layoutX="142.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#computeBillForSelectedOrderButtonPressed" text="Compute bill for selected order" />
+</AnchorPane>

@@ -1,0 +1,7 @@
+
+Order ID = 1
+Table ID = 1
+Date = 26-04-2020 17:40:01
+Items ordered: 
+Name = Meniu cu ceafa de porc Price = 30.5
+Total price = 30.5
